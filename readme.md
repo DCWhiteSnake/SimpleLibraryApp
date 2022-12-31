@@ -1,7 +1,7 @@
 # Simple Python Library App
 # Auth Commands
 ## Borrower
-- sign_in username=testBorrower;password=pass; ✅
+- sign_in username=testBorrower;password=pass;
 
   This signs in the borrower
 - register username=newUsername;password="password";
