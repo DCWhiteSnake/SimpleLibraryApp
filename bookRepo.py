@@ -44,7 +44,7 @@ class bookRepo:
             else:
                 borrowBookResult = self._borrow_book(title=title, username=username)
                 if borrowBookResult[0]:
-                    self.books[title].qty -= 1
+                    self.books[title]._qty = self.books[title]._qty - 1
                     outputString = username + f"\"{title}\" has been taken, please return on time"
                     outputStatus = True
                 else:
@@ -114,7 +114,7 @@ class bookRepo:
         except KeyError:
             self._borrowedBooks[(username, title)] = self.books[title]
             outputString = "Borrow successful"
-            outputStatus = False
+            outputStatus = True
 
         return [outputStatus, outputString]
 
